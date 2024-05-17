@@ -7,7 +7,7 @@ process.env.NODE_ENV = "development";
 module.exports = {
   mode: "development",
   target: "web",
-  devTool: "cheap-module-source-map",
+  devtool: "cheap-module-source-map",
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "build"),
@@ -16,12 +16,20 @@ module.exports = {
   },
 
   devServer: {
-    stats: "minimal",
-    overlay: true,
+    // stats: "minimal",
+    // overlay: true,
+    client: {
+      logging: "info",
+      overlay: true,
+    },
     historyApiFallback: true,
-    disableHostCheck: true,
+    // disableHostCheck: true,
+    allowedHosts: "all",
     headers: { "Access-Control-Allow-Origin": "*" },
-    https: false,
+    // https: false,
+    server: {
+      type: "http",
+    },
   },
 
   plugins: [
