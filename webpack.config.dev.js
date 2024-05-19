@@ -44,7 +44,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
+        use: ["babel-loader", "eslint-loader"], //webpack will watch our files and run ESLint when we hit save
       },
       {
         test: /(\.css)$/,

@@ -3,7 +3,7 @@ import { render } from "react-dom";
 
 function Hi() {
   // In browser->Inspect->Debugger->Browsers pause execution when they hit the debugger
-  debugger;
+  // debugger;
   return <p>Hello World</p>;
 }
 
